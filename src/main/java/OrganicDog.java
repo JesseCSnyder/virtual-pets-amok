@@ -1,17 +1,17 @@
 
 public class OrganicDog extends Dog implements OrganicMethods {
 
-	protected int cleanliness;
+	protected int filthiness;
 	protected int hunger;
 	protected int thirst;
 	protected int tiredness;
 
 	public OrganicDog(String name, String description) {
 		super(name, description);
-		this.cleanliness = 50;
-		this.hunger = -2;
-		this.thirst = -2;
-		this.tiredness = -2;
+		this.filthiness = -1;
+		this.hunger = -1;
+		this.thirst = -1;
+		this.tiredness = -1;
 	}
 
 	public int getHunger() {
@@ -25,72 +25,78 @@ public class OrganicDog extends Dog implements OrganicMethods {
 	public int getTiredness() {
 		return tiredness;
 	}
-	
-	public int getCleanliness() {
-		return cleanliness;
+
+	public int getFilthiness() {
+		return filthiness;
 	}
-	
+
 	@Override
 	public void walk() {
-		happiness += 5;
-		cleanliness += 5;
+		happiness += 3;
+		filthiness -= 2;
 	}
-	
+
 	@Override
 	public void play() {
-		hunger += 3;
-		tiredness += 3;
-		thirst += 3;
+		filthiness += 1;
+		hunger += 1;
+		tiredness += 1;
+		thirst += 1;
 		happiness += 5;
 		health += 3;
 	}
 
 	@Override
 	public void clean() {
-		cleanliness += 7;
+		filthiness -= 10;
 		happiness += 3;
 	}
 
 	@Override
 	public void sleep() {
+		filthiness += 1;
 		tiredness -= 5;
-		hunger += 3;
-		thirst += 3;
+		hunger += 1;
+		thirst += 1;
 		happiness += 3;
 		health += 3;
 	}
-	
+
 	@Override
 	public void water() {
-		hunger += 3;
-		tiredness += 3;
+		filthiness += 1;
+		hunger += 1;
+		tiredness += 1;
 		thirst -= 5;
-		happiness += 3;
-		health += 3;
+		happiness += 1;
+		health += 1;
 	}
+
 	@Override
 	public void feed() {
+		filthiness += 1;
 		hunger -= 5;
-		tiredness += 3;
-		thirst += 3;
-		happiness += 3;
-		health += 3;
+		tiredness += 1;
+		thirst += 1;
+		happiness += 1;
+		health += 1;
 	}
-	
+
 	@Override
 	public void tick() {
-		hunger += 2;
-		tiredness += 2;
-		thirst += 2;
-		happiness -= 2;
-		health -= 2;
+		hunger += 1;
+		thirst += 1;
+		tiredness += 1;
+		filthiness += 1;
+		health -= (hunger+thirst+tiredness+filthiness);
+		happiness = (health+filthiness); 
 	}
 
 	@Override
 	public String toString() {
 		return "\nPet Name: \t " + name + "\nDescription: \t" + description + "\nHunger: \t" + hunger + "\nThirst: \t"
-				+ thirst + "\nTiredness: \t" + tiredness + "\nHappiness: \t" + happiness + "\nHealth: \t"
-				+ health + "\nCleanliness: \t" + cleanliness + "\n";
+				+ thirst + "\nTiredness: \t" + tiredness + "\nHappiness: \t" + happiness + "\nHealth: \t" + health
+				+ "\nFilthiness: \t" + filthiness + "\n";
 	}
 
 }

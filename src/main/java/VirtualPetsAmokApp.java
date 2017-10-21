@@ -23,7 +23,7 @@ public class VirtualPetsAmokApp {
 			litterBox.fillBox();
 			myVirtualPetShelter.shelterTick();
 			if (myVirtualPetShelter.checkForDead() == true) {
-				System.out.println("You have killed a pet./nPlease leave the shelter.");
+				System.out.println("You have killed a pet.");
 				break;
 			}
 			System.out.println("Here are our available pets.");
@@ -38,6 +38,7 @@ public class VirtualPetsAmokApp {
 			System.out.println("Enter [7] to check the cats' litter box.");
 			System.out.println("Enter [8] to oil the robotic pets.");
 			System.out.println("Enter [9] to clean the dog cages.");
+			System.out.println("Enter [10] to walk the dogs.");
 			System.out.println("Enter [quit] to leave the store");
 			optionSelect = input.nextLine();
 			if (optionSelect.equals("1")) {
@@ -116,9 +117,13 @@ public class VirtualPetsAmokApp {
 				}
 			} else if (optionSelect.equals("8")) {
 				myVirtualPetShelter.oilPets();
+				System.out.println("You've oiled the pets. How does that make you feel?");
 			} else if (optionSelect.equals("9")) {
 				myVirtualPetShelter.cleanDogCages();
 				System.out.println("My god! What do they feed you animals?");
+			} else if (optionSelect.equals("10")) {
+				myVirtualPetShelter.walkDogs();
+				System.out.println("If you don't know how to do it, I can show you how to walk the dog.");
 			}
 
 			else {

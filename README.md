@@ -1,0 +1,1 @@
+If any of the pets' health or happiness reaches zero or below the pet dies and the game ends.

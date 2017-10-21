@@ -9,8 +9,8 @@ abstract class VirtualPet {
 	public VirtualPet(String name, String description) {
 		this.name = name;
 		this.description = description;
-		this.happiness = 52;
-		this.health = 52;
+		this.happiness = 100;
+		this.health = 100;
 	}
 
 	public VirtualPet(String name, String description, int hunger, int thirst, int tiredness, int happiness,
@@ -36,13 +36,14 @@ abstract class VirtualPet {
 	public String getDescription() {
 		return description;
 	}
-	
+
 	abstract void tick();
+
 	abstract void play();
 
 	@Override
 	public String toString() {
-		return "\nPet Name:\t " + name + "\nDescription: \t" + description + "\n" + "\nHappiness: \t" + happiness + "\n"
+		return "\nPet Name: \t" + name + "\nDescription: \t" + description + "\n" + "\nHappiness: \t" + happiness + "\n"
 				+ "\nHealth: \t" + health + "\n";
 	}
 

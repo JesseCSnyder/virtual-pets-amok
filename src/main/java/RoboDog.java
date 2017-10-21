@@ -29,7 +29,7 @@ public class RoboDog extends Dog implements RoboticMethods {
 	@Override
 	public String toString() {
 		return "\nPet Name:\t " + name + "\nDescription: \t" + description + "\nHappiness: \t" + happiness + "\nHealth: \t"
-				+ health + "\nOil Level:\t " + oilLevel + "\n";
+				+ health + "\nOil Level: \t" + oilLevel + "\n";
 	}
 
 	@Override

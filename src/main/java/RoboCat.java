@@ -34,8 +34,8 @@ public class RoboCat extends VirtualPet implements RoboticMethods {
 
 	@Override
 	public String toString() {
-		return "\nPet Name:\t " + name + "\nDescription: \t" + description + "\nHappiness: \t" + happiness
-				+ "\nHealth: \t" + health + "\nOil Level:\t " + oilLevel + "\n";
+		return "\nPet Name: \t " + name + "\nDescription: \t" + description + "\nHappiness:\t" + happiness
+				+ "\nHealth: \t" + health + "\nOil Level: \t" + oilLevel + "\n";
 	}
 
 }
