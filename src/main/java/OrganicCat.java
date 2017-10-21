@@ -9,9 +9,9 @@ public class OrganicCat extends VirtualPet implements OrganicMethods {
 	public OrganicCat(String name, String description) {
 		super(name, description);
 		this.cleanliness = 50;
-		this.hunger = 0;
-		this.thirst = 0;
-		this.tiredness = 0;
+		this.hunger = -2;
+		this.thirst = -2;
+		this.tiredness = -2;
 		}
 
 	public int getHunger() {
@@ -45,6 +45,7 @@ public class OrganicCat extends VirtualPet implements OrganicMethods {
 		happiness += 3;
 	}
 	
+	@Override
 	public void play() {
 		hunger += 3;
 		tiredness += 3;

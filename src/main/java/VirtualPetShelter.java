@@ -6,8 +6,6 @@ public class VirtualPetShelter {
 
 	Map<String, VirtualPet> pets = new HashMap<String, VirtualPet>();
 
-	LitterBox litterBox = new LitterBox(0);
-
 	public Collection<VirtualPet> petValues() {
 		return pets.values();
 	}
@@ -71,15 +69,22 @@ public class VirtualPetShelter {
 		pets.remove(name);
 	}
 
+	public boolean checkForDead() {
+		for (VirtualPet current : pets.values()) {
+			if (((current.happiness) <= (0)) || ((current.health) <= (0))) {
+				return true;
+			}
+
+		}
+		return false;
+
+	}
+
 	public void shelterTick() {
 		for (VirtualPet current : pets.values()) {
 			current.tick();
 		}
-////		for (VirtualPet current : pets.values()) {
-////			if (current instanceof OrganicCat) {
-////				current.litterBox.fillBox();
-//			}
-//		}
+
 	}
 
 }

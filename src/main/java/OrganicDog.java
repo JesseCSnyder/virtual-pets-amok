@@ -9,9 +9,9 @@ public class OrganicDog extends Dog implements OrganicMethods {
 	public OrganicDog(String name, String description) {
 		super(name, description);
 		this.cleanliness = 50;
-		this.hunger = 0;
-		this.thirst = 0;
-		this.tiredness = 0;
+		this.hunger = -2;
+		this.thirst = -2;
+		this.tiredness = -2;
 	}
 
 	public int getHunger() {
@@ -36,6 +36,7 @@ public class OrganicDog extends Dog implements OrganicMethods {
 		cleanliness += 5;
 	}
 	
+	@Override
 	public void play() {
 		hunger += 3;
 		tiredness += 3;
@@ -46,7 +47,7 @@ public class OrganicDog extends Dog implements OrganicMethods {
 
 	@Override
 	public void clean() {
-		cleanliness += 5;
+		cleanliness += 7;
 		happiness += 3;
 	}
 

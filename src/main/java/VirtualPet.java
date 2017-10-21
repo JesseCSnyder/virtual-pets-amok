@@ -9,8 +9,8 @@ abstract class VirtualPet {
 	public VirtualPet(String name, String description) {
 		this.name = name;
 		this.description = description;
-		this.happiness = 0;
-		this.health = 0;
+		this.happiness = 52;
+		this.health = 52;
 	}
 
 	public VirtualPet(String name, String description, int hunger, int thirst, int tiredness, int happiness,

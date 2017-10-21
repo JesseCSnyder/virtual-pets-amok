@@ -5,7 +5,7 @@ public class RoboDog extends Dog implements RoboticMethods {
 
 	public RoboDog(String name, String description) {
 		super(name, description);
-		this.oilLevel = 20;
+		this.oilLevel = 52;
 
 	}
 
@@ -20,6 +20,7 @@ public class RoboDog extends Dog implements RoboticMethods {
 		health += 3;
 	}
 	
+	@Override
 	public void play() {
 		happiness += 5;
 		health += 3;
