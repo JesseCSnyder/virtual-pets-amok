@@ -89,7 +89,7 @@ public class OrganicDog extends Dog implements OrganicMethods {
 		tiredness += 1;
 		filthiness += 1;
 		health -= (hunger+thirst+tiredness+filthiness);
-		happiness = (health+filthiness); 
+		happiness = health; 
 	}
 
 	@Override

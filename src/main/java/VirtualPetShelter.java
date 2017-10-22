@@ -69,6 +69,14 @@ public class VirtualPetShelter {
 		pets.remove(name);
 	}
 
+	public void checkHappinessAffectsHealth() {
+		for (VirtualPet current : pets.values()) {
+			if ((current.happiness) <= (50)) {
+				current.happinessAffectsHealth();
+			}
+		}
+	}
+
 	public boolean checkForDead() {
 		for (VirtualPet current : pets.values()) {
 			if (((current.happiness) <= (0)) || ((current.health) <= (0))) {
@@ -78,6 +86,14 @@ public class VirtualPetShelter {
 		}
 		return false;
 
+	}
+
+	public void catsGetSick() {
+		for (VirtualPet current : pets.values()) {
+			if (current instanceof OrganicCat) {
+				((OrganicCat) current).getSick();
+			}
+		}
 	}
 
 	public void shelterTick() {

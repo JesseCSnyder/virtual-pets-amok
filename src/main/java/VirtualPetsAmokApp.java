@@ -20,12 +20,17 @@ public class VirtualPetsAmokApp {
 
 		System.out.println("Welcome to the Virtual Pet Shelter!");
 		do {
-			litterBox.fillBox();
 			myVirtualPetShelter.shelterTick();
+			litterBox.fillBox();
+			if (litterBox.fillLevel >= 30) {
+				myVirtualPetShelter.catsGetSick();
+				System.out.println("Uh oh, the cats are getting sick from the nasty litterbox!");
+			}		
+			myVirtualPetShelter.checkHappinessAffectsHealth();
 			if (myVirtualPetShelter.checkForDead() == true) {
 				System.out.println("You have killed a pet.");
 				break;
-			}
+			}		
 			System.out.println("Here are our available pets.");
 			System.out.println(myVirtualPetShelter.petValues());
 			System.out.println("What would you like to do?");

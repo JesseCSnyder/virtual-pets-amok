@@ -75,6 +75,10 @@ public class OrganicCat extends VirtualPet implements OrganicMethods {
 		happiness += 3;
 		health += 1;
 	}
+	
+	public void getSick() {
+		health -= 15;
+	}
 
 	@Override
 	public void tick() {
