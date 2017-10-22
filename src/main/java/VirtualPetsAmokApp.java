@@ -25,13 +25,13 @@ public class VirtualPetsAmokApp {
 			if (litterBox.fillLevel >= 30) {
 				myVirtualPetShelter.catsGetSick();
 				System.out.println("Uh oh, the cats are getting sick from the nasty litterbox!");
-			}		
+			}
 			myVirtualPetShelter.checkHappinessAffectsHealth();
 			if (myVirtualPetShelter.checkForDead() == true) {
 				System.out.println("You have killed a pet.");
 				break;
-			}		
-			System.out.println("Here are our available pets.");
+			}
+			System.out.println("\nHere are our available pets.");
 			System.out.println(myVirtualPetShelter.petValues());
 			System.out.println("What would you like to do?");
 			System.out.println("Enter [1] to feed all the pets.");
@@ -133,7 +133,7 @@ public class VirtualPetsAmokApp {
 
 			else {
 				if (!optionSelect.equals("quit"))
-					System.out.println("Please try again.");
+					System.out.println("Please try again.\n\nThe pets' needs grow while you waste time.");
 			}
 
 		} while ((!optionSelect.equals("quit")) && (!myVirtualPetShelter.petValues().isEmpty()));

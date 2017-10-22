@@ -75,7 +75,7 @@ public class OrganicCat extends VirtualPet implements OrganicMethods {
 		happiness += 3;
 		health += 1;
 	}
-	
+
 	public void getSick() {
 		health -= 15;
 	}
@@ -86,9 +86,9 @@ public class OrganicCat extends VirtualPet implements OrganicMethods {
 		tiredness += 1;
 		thirst += 1;
 		filthiness += 1;
-		health -= (hunger+tiredness+thirst);
-		happiness = (health-filthiness);
-		}
+		health -= (hunger + tiredness + thirst);
+		happiness = (health - filthiness);
+	}
 
 	@Override
 	public String toString() {

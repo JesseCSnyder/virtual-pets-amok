@@ -5,7 +5,7 @@ public class RoboCat extends VirtualPet implements RoboticMethods {
 
 	public RoboCat(String name, String description) {
 		super(name, description);
-		this.oilLevel = 52;
+		this.oilLevel = 105;
 	}
 
 	public int getOilLevel() {
@@ -14,22 +14,19 @@ public class RoboCat extends VirtualPet implements RoboticMethods {
 
 	@Override
 	public void oil() {
-		oilLevel += 5;
-		happiness += 3;
-		health += 3;
+		oilLevel += 20;
 	}
 
 	@Override
 	public void tick() {
-		happiness -= 2;
-		health -= 2;
-		oilLevel -= 2;
+		oilLevel -= 5;
+		health = oilLevel;
+		happiness = health;
 	}
 
 	@Override
 	public void play() {
-		happiness += 5;
-		health += 3;
+		oilLevel -= 10;
 	}
 
 	@Override

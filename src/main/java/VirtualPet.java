@@ -36,7 +36,7 @@ abstract class VirtualPet {
 	public String getDescription() {
 		return description;
 	}
-	
+
 	public void happinessAffectsHealth() {
 		health -= 20;
 	}
