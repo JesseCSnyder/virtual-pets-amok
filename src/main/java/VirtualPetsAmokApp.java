@@ -28,7 +28,7 @@ public class VirtualPetsAmokApp {
 			}
 			myVirtualPetShelter.checkHappinessAffectsHealth();
 			if (myVirtualPetShelter.checkForDead() == true) {
-				System.out.println("You have killed a pet.");
+				System.out.println("Through negligence, you have killed a pet.");
 				break;
 			}
 			System.out.println("\nHere are our available pets.");
@@ -133,7 +133,7 @@ public class VirtualPetsAmokApp {
 
 			else {
 				if (!optionSelect.equals("quit"))
-					System.out.println("Please try again.\n\nThe pets' needs grow while you waste time.");
+					System.out.println("The pets' needs grow while you waste time.\n\nPlease try again.");
 			}
 
 		} while ((!optionSelect.equals("quit")) && (!myVirtualPetShelter.petValues().isEmpty()));
